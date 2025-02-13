@@ -1,0 +1,50 @@
+/* Style du menu burger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        z-index: 1000;
+    }
+    .burger {
+        display: block;
+    }
+
+    .liens {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--background-color);
+        transition: 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .liens.active {
+        right: 0;
+    }
+
+    .liens nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .liens nav ul li {
+        margin: 20px 0;
+    }
+
+    .barre {
+        display: none;
+    }
+}

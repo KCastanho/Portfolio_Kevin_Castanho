@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --background: #1C2331;
+    --primary: #2f394c;
+    --secondary: #d9d9d9;
+    --accent: #00FFB2;
+    --text: #ffffff;
+    --text_button: #000000;
+    --bouton: #ffffff;
+}
+
+
+:root[data-theme="dark"] {
+    --background: #1C2331;
+    --primary: #2f394c;
+    --secondary: #d9d9d9;
+    --accent: #00FFB2;
+    --text: #ffffff;
+    --text_button: #000000;
+    --bouton: #ffffff;
+
+}
+
+:root[data-theme="light"] {
+    --background: #CED5E3;
+    --primary: #B3BDD0;
+    --secondary: #262626;
+    --accent: #5000ac;
+    --text: #000000;
+    --text_button: #ffffff;
+    --bouton: #000000;
+}
+
+body {
+    background-color: var(--background);
+}
+
+
+/* Liens + Logo */
+
+header {
+    height: 100px;
+    color: var(--background);
+    padding: 1rem;
+    position: relative;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 2rem;
+    top: 20px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+/* bouton dark/light mode */
+
+#mode {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 2rem; /* Aligner le bouton à droite */
+    top: 40px;
+}
+
+
+#mode img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*         */
+
+
+
+/* bouton langue */
+
+#lang {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 7rem; /* Aligner le bouton à droite */
+    top: 40px;
+}
+
+
+#lang img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*         */
+
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+.liens {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+nav ul li {
+    margin: 0 16px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, .active {
+    color: #0078ff;
+}
+
+.barre {
+    background-color: var(--text);
+    height: 1px;
+    width: 70px;
+    margin: 0 16px;
+}
+
+
+
+
+/* ---- PAGE DE CONNEXION ---- */
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background: var(--primary);
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.login-container h2 {
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.login-container label {
+    color: var(--text);
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid var(--secondary);
+    border-radius: 8px;
+    background: var(--background);
+    color: var(--text);
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+.login-container input:focus {
+    border-color: var(--accent);
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    color: var(--text_button);
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.login-container button:hover {
+    background: rgba(0, 255, 178, 0.8);
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    text-align: center;
+    height: 100px; /* Ajuste la hauteur selon le besoin */
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Ajuste automatiquement la largeur selon le texte */
+    padding: 10px 20px; /* Ajoute de l'espace intérieur */
+    background-color: var(--primary);
+    border-radius: 25px;
+    color: var(--text);
+    text-align: center;
+}
+
+footer a {
+    color: var(--text);
+}
