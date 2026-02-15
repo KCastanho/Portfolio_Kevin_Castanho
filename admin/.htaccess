@@ -1,5 +1,0 @@
-# Protéger le fichier config.php
-<Files "config.php">
-    Order Allow,Deny
-    Deny from all
-</Files>

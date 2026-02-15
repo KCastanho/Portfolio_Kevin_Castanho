@@ -1,0 +1,7 @@
+# Dossiers sensibles
+admin/
+api/
+
+# Fichiers de configuration et documentation
+SEO-GUIDE.md
+robots.txt
